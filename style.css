@@ -5,7 +5,7 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body{
+#bodyLogin{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,4 +111,51 @@ body{
 }
 .register-link p a:hover{
     text-decoration: underline;
+}
+
+h1{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+}
+
+#h1Principal,
+#contenedorGraficaBarra{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 90px;
+    margin-bottom: 10px;
+    color: #2063b1;
+
+    
+}
+
+#contenedorGraficaBarra{
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    color: #333;
+    font-weight: 600;
+
+}
+
+#barChart {
+    align-self: flex-start;
+}
+
+#bodyPrincipal{
+    background: url('resources/fondoPrincipal.jpg') no-repeat;
+    background-size: cover;
+    background-position: center%;
 }

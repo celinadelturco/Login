@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenida, Celi</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body id="bodyPrincipal">
+    <h1>ESTADISTICAS DE CELINA</h1>
+    
+    <div id="contenedorGraficaBarra">
+        <h1 id="h1Principal">Niveles de estrés</h1>
+
+        <canvas id="barChart" width="400" height="200"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('barChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Octubre', 'Noviembre', 'Diciembre', 'Enero'],
+                datasets: [{
+                    label: 'Estrés',
+                    data: [80, 60, 40, 20],
+                    backgroundColor: '#3498db',
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</div>
+</body>

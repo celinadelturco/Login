@@ -5,18 +5,30 @@
     <title>Inicio de sesion</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script>
+        function ingreso() {
+            var user = document.getElementById("user").value;
+            var password = document.getElementById("password").value;
+
+            if (user === "celina" && password === "1234") {
+                window.location.href = "principal.html";
+            } else {
+                alert("Usuario o contraseña incorrectos. Intentalo de nuevo.");
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body id="bodyLogin">
     <div class="wrapper">
         <form action="">
             <h1>Iniciar sesión</h1>
             <div class="input-box">
-                <input type="text" placeholder="Usuario" required>
+                <input type="text" id="user" placeholder="Usuario" required>
                 <i class='bx bx-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Contraseña" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
                 <i class='bx bx-lock-alt' ></i>
             </div>
 
@@ -25,7 +37,7 @@
                 <a href="#">¿Olvidaste la contraseña?</a>
             </div>
 
-            <button type="submit" class="btn">Ingresar</button>
+            <button type="button" class="btn" onclick="ingreso()">Ingresar</button>
 
             <div class="register-link">
                 <p>¿Aún no te registraste?</p>
@@ -33,7 +45,8 @@
             </div>
         </form>
     </div>
-
+    <script src="script.js"></script>
+    
 </body>
 
 
