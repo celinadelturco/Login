@@ -19,8 +19,14 @@
 
         <canvas id="barChart" width="400" height="200"></canvas>
     </div>
-    <script>
-        var ctx = document.getElementById('barChart').getContext('2d');
+    
+    <div id="contenedorGraficaTorta">
+        <h1 id="h1Principal">Tiempo ocupado por mes</h1>
+        
+        <canvas id="pieChart" width="400" height="400"></canvas>
+</div>
+<script>
+    var ctx = document.getElementById('barChart').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -39,6 +45,25 @@
                 }
             }
         });
-    </script>
-</div>
+</script>
+<script>
+    var ctx = document.getElementById('pieChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Molestando a Emi', 'Programando', 'Chismeando con Tati', 'Dibujando'],
+            datasets: [{
+                data: [70, 25, 4,1],
+                backgroundColor: ['#3498db', '#2ecc71', '#e74c3c'],
+            }]
+        },
+        options: { 
+            scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+        }
+    });
+</script>
 </body>
