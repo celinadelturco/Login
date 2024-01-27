@@ -15,3 +15,5 @@ var graficoVentas = new Chart(ctx, {
     }
 });
 
+
+

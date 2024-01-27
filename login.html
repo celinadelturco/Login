@@ -6,15 +6,34 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script>
+        let listaUsuarios = [];
+
+        // agrego usuario 1
+        listaUsuarios.push({user: "celina", password: "hola"});
+        // agrego usuario 2
+        listaUsuarios.push({user: "emi", password: "5678"})
+
+
+
+        console.log(listaUsuarios);
         function ingreso() {
             var user = document.getElementById("user").value;
             var password = document.getElementById("password").value;
 
-            if (user === "celina" && password === "1234") {
+            if (validarUsuario(user, password)) {
                 window.location.href = "principal.html";
             } else {
                 alert("Usuario o contraseña incorrectos. Intentalo de nuevo.");
             }
+        }
+
+        function validarUsuario(user, pass){
+            for (userGuardado of listaUsuarios) {
+                console.log(userGuardado);
+                if (user === userGuardado["user"] && pass === userGuardado["password"])
+            return true;
+            }
+            return false;
         }
     </script>
 </head>
@@ -45,8 +64,6 @@
             </div>
         </form>
     </div>
-    <script src="script.js"></script>
-    
 </body>
 
 
