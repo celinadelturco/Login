@@ -204,3 +204,57 @@ h2{
     align-items: center;
     text-align: center;
 }
+
+#btnEncuesta{
+    width: 30%;
+    height: 60px;
+    background: #b92b2b;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: end;
+}
+
+
+
+/* -------*/
+form {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#resultado{
+    width: 300px;
+    margin: 400px auto;
+    padding: 20px;
+
+}
+
+#bodyEncuesta{
+    background: url('resources/fondoEncuesta.jpeg') no-repeat;
+    background-size: cover;
+}

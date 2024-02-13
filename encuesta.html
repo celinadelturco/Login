@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    
+</head>
+
+<body id="bodyEncuesta">
+    <div h2Encuesta>
+        <h2>ENCUESTA SOBRE CELI</h2>
+    </div>
+    <form id="formulario">
+        <h3>Datos personales</h3>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="resultado"></div>
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            // Prevenir el comportamiento por defecto del formulario
+            event.preventDefault();
+            
+            // Obtener los valores del formulario
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var mensaje = document.getElementById("mensaje").value;
+
+            // Aquí podrías realizar cualquier acción que necesites con estos datos
+            // Por ejemplo, mostrarlos en la página
+            //no entiendo
+            
+                var resultadoHTML = "<h2>Resultados:</h2>";
+                resultadoHTML += "<p><strong>Nombre:</strong> " + nombre + "</p>";
+                resultadoHTML += "<p><strong>Email:</strong> " + email + "</p>";
+                resultadoHTML += "<p><strong>Mensaje:</strong> " + mensaje + "</p>";
+
+                document.getElementById("resultado").innerHTML = resultadoHTML;
+        });
+    </script>
+</body>
+    
